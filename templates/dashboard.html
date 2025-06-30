@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Médico - Telesalud</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background: url('{{ url_for('static', filename='fondo_dashboard.png') }}') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.8);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+        }
+        .container {
+            position: relative;
+            z-index: 2;
+            margin-top: 5rem;
+        }
+        .card-option {
+            border: none;
+            border-radius: 16px;
+            background-color: rgba(255,255,255,0.9);
+            transition: transform 0.2s;
+            height: 100%;
+        }
+        .card-option:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container text-center">
+        <h2 class="mb-5 fw-bold">Panel del Médico</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <a href="/historia" class="text-decoration-none">
+                    <div class="card card-option shadow-lg p-4">
+                        <h4>📋 Historia Clínica</h4>
+                        <p>Registrar y descargar PDF</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="/reporte" class="text-decoration-none">
+                    <div class="card card-option shadow-lg p-4">
+                        <h4>📅 Reporte de Pacientes</h4>
+                        <p>Filtrar por fecha y exportar</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

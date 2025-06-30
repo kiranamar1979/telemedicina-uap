@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Historia Clínica PDF</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        h1 { text-align: center; }
+        .seccion { margin-bottom: 20px; }
+        label { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Historia Clínica</h1>
+    <div class="seccion"><label>Fecha:</label> {{ fecha }}</div>
+    <div class="seccion"><label>Nombre:</label> {{ nombre }}</div>
+    <div class="seccion"><label>Edad:</label> {{ edad }}</div>
+    <div class="seccion"><label>Anamnesis:</label><br> {{ anamnesis }}</div>
+    <div class="seccion"><label>Diagnóstico:</label><br> {{ diagnostico }}</div>
+    <div class="seccion"><label>Tratamiento:</label><br> {{ tratamiento }}</div>
+    <div class="seccion"><label>Estudios solicitados:</label><br> {{ estudios }}</div>
+    <div class="seccion"><label>Presión arterial:</label> {{ presion }}</div>
+    <div class="seccion"><label>Talla:</label> {{ talla }} cm</div>
+    <div class="seccion"><label>Peso:</label> {{ peso }} kg</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telesalud U.A.P.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background: url('{{ url_for('static', filename='telesalud.gif') }}') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-shadow: 1px 1px 3px black;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            top: 40%;
+            transform: translateY(-50%);
+        }
+        .btn-med {
+            font-size: 1.5rem;
+            padding: 0.75rem 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="content container">
+        <img src="{{ url_for('static', filename='uap_logo.png') }}" class="mb-4" width="150">
+        <h1 class="display-4 fw-bold">TELESALUD U.A.P.</h1>
+        <p class="lead">Escribiendo una nueva Historia con vos</p>
+        <a href="/login" class="btn btn-success btn-med mt-4">Iniciar Atención Médica</a>
+    </div>
+</body>
+</html>

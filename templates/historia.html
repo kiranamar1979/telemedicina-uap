@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+    body {
+        background-image: url("{{ url_for('static', filename='fondo.png') }}");
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+    }
+    .historia-container {
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        margin-top: 3rem;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia Clínica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Historia Clínica</h2>
+        <form method="post">
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="fecha" class="form-label">Fecha</label>
+                    <input type="date" class="form-control" name="fecha" id="fecha" required>
+                </div>
+                <div class="col">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" required>
+                </div>
+                <div class="col">
+                    <label for="edad" class="form-label">Edad</label>
+                    <input type="number" class="form-control" name="edad" id="edad" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="anamnesis" class="form-label">Anamnesis</label>
+                <textarea class="form-control" name="anamnesis" id="anamnesis" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="diagnostico" class="form-label">Diagnóstico</label>
+                <textarea class="form-control" name="diagnostico" id="diagnostico" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="tratamiento" class="form-label">Tratamiento</label>
+                <textarea class="form-control" name="tratamiento" id="tratamiento" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="estudios" class="form-label">Solicitud de estudios</label>
+                <textarea class="form-control" name="estudios" id="estudios" rows="2"></textarea>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="presion" class="form-label">Presión Arterial</label>
+                    <input type="text" class="form-control" name="presion" id="presion">
+                </div>
+                <div class="col">
+                    <label for="talla" class="form-label">Talla (cm)</label>
+                    <input type="number" class="form-control" name="talla" id="talla">
+                </div>
+                <div class="col">
+                    <label for="peso" class="form-label">Peso (kg)</label>
+                    <input type="number" class="form-control" name="peso" id="peso">
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            <a href="/descargar_historia" class="btn btn-outline-success ms-3">Descargar PDF</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
